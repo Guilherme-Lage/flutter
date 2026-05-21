@@ -6,8 +6,7 @@ class CardIcone extends StatelessWidget {
   final String descricao;
   final String textoBotao;
   final Color cor;
-  final VoidCallback aoClicar; // Função para avisar a tela home sobre o clique
-
+  final VoidCallback aoClicar; 
   const CardIcone({
     super.key,
     required this.icone,
@@ -37,10 +36,10 @@ class CardIcone extends StatelessWidget {
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // Ícone com a cor de destaque configurada
+     
           Icon(icone, size: 40, color: cor),
           const SizedBox(width: 16),
-          // Coluna com Textos e Botão
+     
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -49,7 +48,7 @@ class CardIcone extends StatelessWidget {
                   titulo,
                   style: TextStyle(
                     fontSize: 18,
-                    fontWeight: FontWeight.bold, // Desafio: Negrito
+                    fontWeight: FontWeight.bold, 
                     color: cor,
                   ),
                 ),

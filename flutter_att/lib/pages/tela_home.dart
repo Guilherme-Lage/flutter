@@ -9,7 +9,7 @@ class TelaHome extends StatefulWidget {
 }
 
 class _TelaHomeState extends State<TelaHome> {
-  // Estado que armazena a mensagem exibida na tela
+
   String _mensagem = "Nenhum botão clicado ainda.";
 
   void _atualizarMensagem(String opcao) {
@@ -29,7 +29,7 @@ class _TelaHomeState extends State<TelaHome> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            // Container superior que exibe a mensagem de feedback
+
             Container(
               width: double.infinity,
               margin: const EdgeInsets.all(16),
@@ -48,7 +48,6 @@ class _TelaHomeState extends State<TelaHome> {
               ),
             ),
 
-            // Card 1: Perfil
             CardIcone(
               icone: Icons.person,
               titulo: "Perfil",
@@ -58,7 +57,7 @@ class _TelaHomeState extends State<TelaHome> {
               aoClicar: () => _atualizarMensagem("Perfil"),
             ),
 
-            // Card 2: Configurações
+
             CardIcone(
               icone: Icons.settings,
               titulo: "Configurações",
@@ -67,8 +66,7 @@ class _TelaHomeState extends State<TelaHome> {
               cor: Colors.orange,
               aoClicar: () => _atualizarMensagem("Configurações"),
             ),
-
-            // Card 3: Favoritos
+            
             CardIcone(
               icone: Icons.favorite,
               titulo: "Favoritos",
@@ -78,7 +76,6 @@ class _TelaHomeState extends State<TelaHome> {
               aoClicar: () => _atualizarMensagem("Favoritos"),
             ),
 
-            // Card 4: Notificações
             CardIcone(
               icone: Icons.notifications,
               titulo: "Notificações",
@@ -90,12 +87,11 @@ class _TelaHomeState extends State<TelaHome> {
 
             const SizedBox(height: 20),
 
-            // Desafio extra: Nome do aluno no final da tela
+
            const Padding(
   padding: EdgeInsets.only(bottom: 24.0),
   child: Text(
     "Desenvolvido por: Guilherme Costa",
-    // O style deve ficar EXATAMENTE aqui, dentro do Text:
     style: TextStyle(
       fontSize: 14,
       fontStyle: FontStyle.italic,
@@ -107,7 +103,7 @@ class _TelaHomeState extends State<TelaHome> {
           ],
         ),
       ),
-      // Desafio extra: FloatingActionButton que altera a mensagem da tela
+   
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           setState(() {
